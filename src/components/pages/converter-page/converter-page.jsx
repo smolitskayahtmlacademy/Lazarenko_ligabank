@@ -1,6 +1,7 @@
 import React from 'react';
 import Form from '../../form/form';
 import Header from '../../header/header';
+import History from '../../history/history';
 import Promo from '../../promo/promo';
 
 function ConverterPage() {
@@ -9,6 +10,7 @@ function ConverterPage() {
       <Header />
       <Promo />
       <Form />
+      <History />
     </div>
   );
 }
