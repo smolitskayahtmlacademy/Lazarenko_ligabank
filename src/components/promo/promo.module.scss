@@ -7,10 +7,70 @@
 .container {
   width: 1366px;
   min-height: 400px;
+  background-repeat: no-repeat;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    background: linear-gradient(
+      180.24deg,
+      rgba(32, 39, 179, 0) 36.31%,
+      #2027b3 99.79%
+    );
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 298px;
+    background: linear-gradient(
+      180.24deg,
+      rgba(32, 39, 179, 0) 32.89%,
+      #2027b3 99.79%
+    );
+  }
+}
+
+.inner {
   padding-top: 102px;
   padding-left: 268px;
-  background-image: url('../../assets/img/promo.png');
-  background-repeat: no-repeat;
+  height: 100%;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 150px;
+    top: 131px;
+    bottom: 0;
+    width: 150px;
+    background: linear-gradient(
+      183.47deg,
+      rgba(56, 65, 255, 0) 66.3%,
+      #3841ff 97.14%
+    );
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 298px;
+    top: 131px;
+    bottom: 0;
+    width: 270px;
+    background: linear-gradient(
+      183.47deg,
+      rgba(56, 65, 255, 0) 27.26%,
+      #3841ff 97.14%
+    );
+  }
 }
 
 .title {
@@ -19,6 +79,18 @@
   color: #f6f7ff;
   font-weight: 700;
   margin-bottom: 10px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 61px;
+    right: 238px;
+    bottom: 0;
+    width: 430px;
+    background-repeat: no-repeat;
+    background-image: url('../../assets/img/cards.png');
+    z-index: 2;
+  }
 }
 
 .text {

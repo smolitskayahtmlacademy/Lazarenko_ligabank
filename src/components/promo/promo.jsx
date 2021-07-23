@@ -5,7 +5,7 @@ function Promo() {
   return (
     <section className={styles.wrapper}>
       <div className={styles.container}>
-        <div>
+        <div className={styles.inner}>
           <h2 className={styles.title}>Лига Банк</h2>
           <p className={styles.text}>Кредиты на любой случай</p>
           <a className={styles.button} href="/">
