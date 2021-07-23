@@ -1,12 +1,13 @@
 import React from 'react';
 import Header from '../../header/header';
+import Promo from '../../promo/promo';
 
 function ConverterPage() {
   return (
-    <>
+    <div>
       <Header />
-      <div></div>
-    </>
+      <Promo />
+    </div>
   );
 }
 
