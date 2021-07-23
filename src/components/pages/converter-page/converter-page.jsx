@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../footer/footer';
 import Form from '../../form/form';
 import Header from '../../header/header';
 import History from '../../history/history';
@@ -11,6 +12,7 @@ function ConverterPage() {
       <Promo />
       <Form />
       <History />
+      <Footer />
     </div>
   );
 }

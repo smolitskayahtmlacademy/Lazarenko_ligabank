@@ -1,16 +1,12 @@
 import React from 'react';
 import styles from './header.module.scss';
-import logo from '../../assets/img/logo.svg';
+import Logo from '../logo/logo';
 
 function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.wrapper}>
-        <div className={styles.logo}>
-          <a className={`${styles.link} ${styles.linkLogo}`} href="/">
-            <img src={logo} alt="логотип Лига банка" />
-          </a>
-        </div>
+        <Logo />
         <nav className={styles.nav}>
           <ul className={styles.list}>
             <li>
@@ -41,7 +37,7 @@ function Header() {
           </ul>
         </nav>
         <div>
-          <a className={`${styles.link} ${styles.linkLogin}`} href="/">
+          <a className={`${styles.link} ${styles.login}`} href="/">
             Войти в Интернет-банк
           </a>
         </div>

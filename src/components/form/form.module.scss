@@ -60,7 +60,8 @@
   font-family: 'Roboto', Arial, sans-serif;
   text-align: center;
   margin-right: 278px;
-  padding-right: 20px;
+  padding-right: 17px;
+  padding-left: 30px;
 }
 
 .button {
@@ -90,4 +91,6 @@
   opacity: 1;
   background: url('../../assets/img/date.svg') no-repeat center;
   background-size: contain;
+  width: 37px;
+  height: 40px;
 }

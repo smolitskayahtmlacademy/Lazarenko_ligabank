@@ -16,10 +16,6 @@
   gap: 46px;
 }
 
-.logo {
-  padding-bottom: 10px;
-}
-
 .nav {
   width: 714px;
   margin-left: -24px;
@@ -46,27 +42,23 @@
   &Active {
     color: #2c36f2;
   }
+}
 
-  &Login {
-    padding: 12.5px;
-    padding-left: 30px;
-    position: relative;
-    margin-right: -12.5px;
+.login {
+  padding: 12.5px;
+  padding-left: 30px;
+  position: relative;
+  margin-right: -12.5px;
 
-    &::before {
-      content: '';
-      position: absolute;
-      background-image: url('../../assets/img/enter.svg');
-      background-repeat: no-repeat;
-      top: 0;
-      left: 0;
-      width: 20px;
-      height: 22px;
-      transform: translateY(50%);
-    }
-  }
-
-  &Logo {
-    margin-left: -12px;
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../../assets/img/enter.svg');
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 22px;
+    transform: translateY(50%);
   }
 }
