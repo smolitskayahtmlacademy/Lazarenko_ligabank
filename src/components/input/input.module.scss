@@ -29,4 +29,8 @@
   background-repeat: no-repeat;
   background-image: url('../../assets/img/arrowhead.svg');
   background-position: 85px 24px;
+
+  &:hover {
+    cursor: pointer;
+  }
 }

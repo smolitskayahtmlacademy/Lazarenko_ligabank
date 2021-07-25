@@ -60,8 +60,15 @@
   font-family: 'Roboto', Arial, sans-serif;
   text-align: center;
   margin-right: 278px;
-  padding-right: 17px;
-  padding-left: 30px;
+  background-image: url('../../assets/img/date.svg');
+  background-repeat: no-repeat;
+  background-position: 329px 5px;
+  padding-top: 6px;
+  padding-right: 65px;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .button {
@@ -76,7 +83,7 @@
   border: none;
   transition: background-color 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
 
-  &:hover {
+  &:hover:not(:disabled) {
     background-color: #000000;
     cursor: pointer;
   }
@@ -84,13 +91,20 @@
   &:active {
     opacity: 0.5;
   }
+
+  &:disabled {
+    opacity: 0.2;
+  }
 }
 
-::-webkit-calendar-picker-indicator {
-  color: transparent;
-  opacity: 1;
-  background: url('../../assets/img/date.svg') no-repeat center;
-  background-size: contain;
-  width: 37px;
-  height: 40px;
+.calendar {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-585px, -226px);
+  border-radius: 4px;
+  border: 1px solid #1f1e25;
+  overflow: hidden;
+  width: 390px;
 }

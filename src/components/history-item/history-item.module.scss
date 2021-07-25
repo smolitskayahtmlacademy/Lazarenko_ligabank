@@ -1,21 +1,28 @@
 .item {
   font-size: 18px;
   display: flex;
-  gap: 0 40px;
+  position: relative;
+  width: 450px;
+  height: 20px;
+}
+
+.date {
+  margin-right: 40px;
+}
+
+.from {
+  margin-right: 15px;
+  display: block;
+  padding-right: 50px;
   position: relative;
 
   &::after {
     content: '';
     position: absolute;
     top: 3px;
-    left: 222px;
+    right: -3px;
     background-image: url('../../assets/img/arrow.svg');
     width: 40px;
     height: 16px;
   }
-}
-
-.text {
-  margin-right: 25px;
-  width: 80px;
 }

@@ -18,10 +18,18 @@ function Footer() {
           </address>
         </div>
         <ul className={styles.list}>
-          <li>Услуги</li>
-          <li>Рассчитать кредит</li>
-          <li>Контакты</li>
-          <li>Задать вопрос</li>
+          <li>
+            <a href="/">Услуги</a>
+          </li>
+          <li>
+            <a href="/">Рассчитать кредит</a>
+          </li>
+          <li>
+            <a href="/">Контакты</a>
+          </li>
+          <li>
+            <a href="/">Задать вопрос</a>
+          </li>
         </ul>
         <div className={styles.inner}>
           <p className={styles.title}>*0904</p>
