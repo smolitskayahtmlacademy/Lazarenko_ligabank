@@ -4,14 +4,17 @@ import Form from '../../form/form';
 import Header from '../../header/header';
 import History from '../../history/history';
 import Promo from '../../promo/promo';
+import styles from './converter-page.module.scss';
 
 function ConverterPage() {
   return (
-    <div>
+    <div className={styles.wrapper}>
       <Header />
-      <Promo />
-      <Form />
-      <History />
+      <main>
+        <Promo />
+        <Form />
+        <History />
+      </main>
       <Footer />
     </div>
   );

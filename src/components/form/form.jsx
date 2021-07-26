@@ -14,7 +14,7 @@ const USD = 'USD';
 const RUB = 'RUB';
 const FIX = 4;
 const MAX_LENGTH = 10;
-const BACKEND_URL = 'https://openexchangerates.org/api/historicall';
+const BACKEND_URL = 'https://openexchangerates.org/api/historical';
 const APP_ID = '.json?app_id=d3e503d72f284685b5d0c042551877ab';
 
 let id = 1;
@@ -48,12 +48,12 @@ function Form() {
       });
   }, [date, dispatch]);
 
-  const handleDateChange = (evt) => {
+  const onDateChange = (evt) => {
     setDate(evt);
     setIsVisible(false);
   };
 
-  const handleAmountFromChange = (evt) => {
+  const onAmountFromChange = (evt) => {
     const value = evt.target.value.replace(/^0+/, '');
 
     if (value.length < MAX_LENGTH) {
@@ -64,7 +64,7 @@ function Form() {
     }
   };
 
-  const handleCurrencyFromChange = (evt) => {
+  const onCurrencyFromChange = (evt) => {
     const value = evt.target.value;
     setCurrencyFrom(value);
     setAmountTo(
@@ -72,7 +72,7 @@ function Form() {
     );
   };
 
-  const handleAmountToChange = (evt) => {
+  const onAmountToChange = (evt) => {
     const value = evt.target.value.replace(/^0+/, '');
 
     if (value.length < MAX_LENGTH) {
@@ -83,7 +83,7 @@ function Form() {
     }
   };
 
-  const handleCurrencyToChange = (evt) => {
+  const onCurrencyToChange = (evt) => {
     const value = evt.target.value;
     setCurrencyTo(value);
     setAmountTo(
@@ -91,7 +91,7 @@ function Form() {
     );
   };
 
-  const handleButtonClick = (evt) => {
+  const onButtonClick = (evt) => {
     evt.preventDefault();
     dispatch(
       addHistory({
@@ -117,19 +117,19 @@ function Form() {
           <Input
             amountValue={amountFrom}
             currencyValue={currencyFrom}
-            onAmountChange={handleAmountFromChange}
-            onCurrencyChange={handleCurrencyFromChange}
+            onAmountChange={onAmountFromChange}
+            onCurrencyChange={onCurrencyFromChange}
           />
           <Input
             amountValue={amountTo}
             currencyValue={currencyTo}
-            onAmountChange={handleAmountToChange}
-            onCurrencyChange={handleCurrencyToChange}
+            onAmountChange={onAmountToChange}
+            onCurrencyChange={onCurrencyToChange}
           />
           {isVisible && (
             <Calendar
               className={styles.calendar}
-              onChange={handleDateChange}
+              onChange={onDateChange}
               value={date}
               minDate={dayjs(currentDate).subtract(DIFFERENCE, 'day').toDate()}
               maxDate={currentDate}
@@ -146,9 +146,9 @@ function Form() {
           />
           <button
             className={styles.button}
-            onClick={handleButtonClick}
-            type="submit"
-            disabled={!amountFrom || !amountTo}
+            onClick={onButtonClick}
+            type="button"
+            disabled={!+amountFrom || !+amountTo}
           >
             Сохранить результат
           </button>
