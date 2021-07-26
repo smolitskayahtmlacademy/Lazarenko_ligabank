@@ -7,7 +7,7 @@ import { clearHistory } from '../../store/actions';
 function History() {
   const dispatch = useDispatch();
 
-  const handleClick = () => {
+  const onButtonClick = () => {
     dispatch(clearHistory());
   };
 
@@ -16,7 +16,7 @@ function History() {
       <div className={styles.container}>
         <h2 className={styles.title}>История конвертация</h2>
         <HistoryList />
-        <button className={styles.button} onClick={handleClick} type="button">
+        <button className={styles.button} onClick={onButtonClick} type="button">
           Очистить историю
         </button>
       </div>
